@@ -25,7 +25,7 @@ namespace ShouldWorkServiceConsumeTest
         {
             HttpClient client = new HttpClient();
             HttpResponseMessage response =
-                client.GetAsync("http://localhost:52021/api/IsGoodDayToWork/IsItAGoodDayToWork/" + zipcode).Result;
+                client.GetAsync("http://localhost:52021/api/IsGoodDayToWork/" + zipcode).Result;
             return response.Content.ReadAsAsync<JObject>().Result;
         }
     }
